@@ -16,7 +16,7 @@ public class DataInOutStream {
 	public static void main(String[] args) {
 		
 		try {
-			dos = new DataOutputStream(System.out);
+			dos = new DataOutputStream(new FileOutputStream("file.txt"));
 			dos.writeInt(10);
 			dos.writeDouble(155.2);
 			dos.writeBoolean(true);
@@ -24,6 +24,7 @@ public class DataInOutStream {
 			dos.writeUTF("문자열 입력하기");
 			
 			dos.flush();
+			dis = new DataInputStream(new FileInputStream("file.txt"));
 			
 			System.out.println("정수값: " + dis.readInt());
 			System.out.println("실수값: " + dis.readDouble());
