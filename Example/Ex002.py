@@ -5,7 +5,7 @@ c = a + b
 print(f"결과값은 : {c}")
 
 animal: set = '사자'
-number1: float 10.7
+number1: float = 10.7
 number2: float = 5.7
 
 1 + 2 + 3

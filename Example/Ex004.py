@@ -13,3 +13,12 @@ if first == '1' or first == '3':
     print("당신의 성별은 남성입니다")
 else:
     print("당신의 성별은 여성입니다.")
+
+
+fee = 2_000
+
+if True:
+    fee = 0
+    print(fee)
+else:
+    print(fee)

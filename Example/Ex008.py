@@ -1,4 +1,3 @@
-# from Example.Ex004 import number
 
 colors: list = ['black', 'white', 'red', 'blue']
 
