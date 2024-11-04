@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/folderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:padding="15dp" />
+
+    <android.widget.Button
+        android:id="@+id/editFolderNameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="폴더 이름 수정"
+        android:background="@drawable/rounded_button"
+        android:textColor="#121212"
+        android:textSize="12sp"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- 리사이클러 뷰: 사진 목록 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/photoRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
+
+    <!-- 뒤로가기 버튼 -->
+    <android.widget.Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="뒤로가기"
+        android:background="@drawable/rounded_button"
+        android:textColor="#121212"
+        android:layout_marginTop="15dp"/>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <!-- 기존 문자열 -->
+    <string name="app_name">My Application</string> <!-- 또는 FinalProject로 선택 -->
+    <string name="save">저장</string>
+    <string name="confirm">확인</string>
+    <string name="retry">재촬영</string>
+    <string name="exit">나가기</string>
+    <string name="add_description">설명 추가</string>
+    <string name="image_description">업로드된 이미지</string>
+
+    <!-- 새로 추가된 문자열 -->
+    <string-array name="blood_types">
+        <item>A형</item>
+        <item>B형</item>
+        <item>O형</item>
+        <item>AB형</item>
+    </string-array>
+
+    <string-array name="baby_order">
+        <item>첫째</item>
+        <item>둘째</item>
+        <item>셋째</item>
+        <item>넷째</item>
+        <item>다섯째</item>
+        <item>여섯째</item>
+        <item>일곱째</item>
+        <item>여덟째</item>
+        <item>아홉째</item>
+        <item>열째</item>
+    </string-array>
+</resources>

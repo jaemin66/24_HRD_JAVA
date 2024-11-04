@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:weightSum="3"
+        android:orientation="horizontal">
+
+        <android.widget.Button
+            android:id="@+id/backBtn"
+            android:layout_width="100dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="BACK"
+            android:background="@drawable/btn_blue"
+            android:textColor="#ffffff"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="회원가입"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름"
+                android:textSize="25dp"/>
+            <EditText
+                android:id="@+id/nameEdt"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="이름"
+                android:layout_marginBottom="10dp"
+                android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="성별"
+            android:textSize="25dp"/>
+        <RadioGroup
+            android:id="@+id/genderRG"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="남자"
+                android:textSize="20dp"/>
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="여자"
+                android:textSize="20dp"/>
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="생년월일"
+            android:textSize="25dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <EditText
+                android:id="@+id/yearEdt"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="연도"
+                android:textSize="20dp"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/monthEdt"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="월"
+                android:textSize="20dp"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/dayEdt"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="일"
+                android:textSize="20dp"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이디"
+            android:textSize="25dp"/>
+
+        <EditText
+            android:id="@+id/idEdt"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="아이디"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호"
+            android:textSize="25dp"/>
+
+        <EditText
+            android:id="@+id/pwEdt"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="비밀번호"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:inputType="textPassword"/>
+
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/register"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="가입"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/btn_blue"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>
