@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Note">
+
+    <!-- 기록 화면 제목 -->
+    <TextView
+        android:id="@+id/recordTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기록"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingBottom="10dp"
+        android:padding="15dp"/>
+
+    <!-- 폴더 검색 바 -->
+    <EditText
+        android:id="@+id/folderSearchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="폴더 검색하기"
+        android:padding="10dp"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 새 폴더 추가 버튼 -->
+    <android.widget.Button
+        android:id="@+id/addFolderButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="새 폴더 추가"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="#121212"/>
+
+    <!-- 리사이클러 뷰: 저장된 폴더 목록 및 사진 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/folderRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"/>
+
+    <!-- 하단 탐색 바 -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</LinearLayout>

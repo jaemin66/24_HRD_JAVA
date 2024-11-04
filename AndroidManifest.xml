@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <!-- 카메라 기능 사용 선언 -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <!-- 카메라 및 파일 저장에 필요한 권한 선언 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- 외부 저장소 접근 권한 (Android 9 이하에서만 사용) -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Android 10 이상에서 Scoped Storage 권장 -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/teamfour"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/teamfour"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.myapplication"
+        tools:targetApi="31">
+
+        <!-- 각 화면 액티비티 선언 -->
+        <activity
+            android:name=".FolderDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Note"
+            android:exported="false" />
+        <activity
+            android:name=".AnalysisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- Login Activity가 메인 화면으로 설정 -->
+        <activity
+            android:name=".Login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 파일 제공자 선언 (사진 파일 저장을 위한 설정) -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.myapplication.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fileprovider" />
+        </provider>
+
+    </application>
+</manifest>

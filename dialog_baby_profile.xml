@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <Spinner
+        android:id="@+id/inputBabyOrder"
+        android:layout_width="150dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:entries="@array/baby_order"/>
+
+    <EditText
+        android:id="@+id/inputBabyName"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:hint="아기 이름" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp">
+
+        <EditText
+            android:id="@+id/inputBabyYear"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:hint="연도"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/inputBabyMonth"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:hint="월"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/inputBabyDay"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:hint="일"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/inputBabyBlood"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:entries="@array/blood_types" />
+
+    <RadioGroup
+        android:id="@+id/babyGenderRG"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/babyMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="남자"
+            android:textSize="20dp"/>
+        <RadioButton
+            android:id="@+id/babyFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="여자"
+            android:textSize="20dp"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="보유중인 피부 질환 및 과거 이력"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"/>
+    <LinearLayout
+        android:layout_width="290dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:background="#D5E9F9">
+        <EditText
+            android:id="@+id/inputBabyDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|top"
+            android:hint="없으면 없음 작성"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:textSize="18dp"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
